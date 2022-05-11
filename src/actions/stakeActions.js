@@ -16,7 +16,6 @@ import { toWei, getCurrentAccount, getApy } from "../utils/helper";
 import BigNumber from "bignumber.js";
 import config from "../config";
 import {
-  AOG,
   poolId,
   tokenContarctAddresses,
   stakeContractAdrresses,
@@ -305,18 +304,8 @@ export const unstakeTokens =
     const pool = poolId[tokenType];
     let stakeCallback;
     try {
-      if (chainId?.toString() === "137") {
         stakeCallback = await stakeContract.withdraw(pool, depositTokens);
         // .send({ from: account, gasPrice: 100000000000 });
-      } else {
-        if (tokenType === AOG) {
-          stakeCallback = await stakeContract.emergencyWithdraw(pool);
-          // .send({ from: account });
-        } else {
-          stakeCallback = await stakeContract.withdraw(pool, depositTokens);
-          // .send({ from: account });
-        }
-      }
     } catch (error) {
       console.log("unstake error ", error);
     }

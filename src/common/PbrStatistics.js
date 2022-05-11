@@ -165,9 +165,9 @@ const PbrStatistics = ({
             <a
               target="_blank"
               href={
-                currentChain === "137"
-                  ? "https://quickswap.exchange/#/swap?inputCurrency=MATIC&outputCurrency=0x0D6ae2a429df13e44A07Cd2969E085e4833f64A0"
-                  : "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x298d492e8c1d909d3f63bc4a36c66c64acb3d695"
+                currentChain === "941"
+                  ? "https://google.com"
+                  : "https://google.com"
               }
             >
               <Button variant="contained" className={classes.buyNow}>

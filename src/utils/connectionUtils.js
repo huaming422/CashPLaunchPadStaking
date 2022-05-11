@@ -3,9 +3,8 @@ import connectors from "contracts/connections/connectors";
 import useActiveWeb3React from "hooks/useActiveWeb3React";
 import { useCallback } from "react";
 import {
-  bscNetwork,
   etheriumNetwork,
-  moonriverNetwork,
+  pulseChainNetwork,
   nullAddress,
 } from "../constants/index";
 
@@ -66,25 +65,19 @@ export const getCurrentNetwork = (networkId) => {
     return null;
   }
 
-  if (
-    parseInt(networkId) === config.bscChain ||
-    parseInt(networkId) === config.bscChainTestent
-  ) {
-    return bscNetwork;
-  } else if (
+
+ if (
     parseInt(networkId) === config.ethChainId ||
     parseInt(networkId) === config.ethChainIdRinkeby
   ) {
     return etheriumNetwork;
   } else if (
-    parseInt(networkId) === config.moonriverChain ||
-    parseInt(networkId) === config.moonriverChainTestent
+    parseInt(networkId) === config.plsChainMainnet ||
+    parseInt(networkId) === config.plsChainTestnet
   ) {
-    return moonriverNetwork;
-  } else {
-    return etheriumNetwork;
+    return pulseChainNetwork;
   }
-};
+}
 
 export function useWalletConnectCallback() {
   const { activate } = useActiveWeb3React();

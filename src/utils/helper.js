@@ -2,12 +2,9 @@ import axios from "axios";
 import BigNumber from "bignumber.js";
 import {
   apyConstants,
-  bscNetwork,
   coingeckoTokenId,
   etheriumNetwork,
-  harmonyNetwork,
-  maticNetwork,
-  tokenPriceConstants,
+  pulseChainNetwork
 } from "../constants";
 import config from "./config";
 
@@ -198,14 +195,8 @@ export const setupNetwork = async (networkObject) => {
 
 export const getCurrentNetworkName = (networkId) => {
   const _id = parseInt(networkId);
-  if ([config.bscChain, config.bscChainTestent].includes(_id)) {
-    return bscNetwork;
-  } else if (
-    [config.polygon_chain_mainnet, config.polygon_chain_testnet].includes(_id)
-  ) {
-    return maticNetwork;
-  } else if ([config.hmyChainMainnet, config.hmyChainMainnet].includes(_id)) {
-    return harmonyNetwork;
+ if ([config.plsChainMainnet, config.plsChainMainnet].includes(_id)) {
+    return pulseChainNetwork;
   } else {
     return etheriumNetwork;
   }
@@ -216,11 +207,6 @@ export const fetchTokenPrice = async (tokenSymbol) => {
     if (!tokenSymbol) {
       return null;
     }
-
-    if (Object.keys(tokenPriceConstants).includes(tokenSymbol)) {
-      return tokenPriceConstants[tokenSymbol];
-    }
-
     const token_id = coingeckoTokenId?.[tokenSymbol];
 
     const priceRes = await axios.get(

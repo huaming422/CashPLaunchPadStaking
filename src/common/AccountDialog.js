@@ -10,7 +10,6 @@ import {
   tokenName,
   tokenLogo,
   supportedStaking,
-  CORGIB,
   tokenAddresses,
 } from "../constants";
 import { formatCurrency, fromWei } from "../utils/helper";
@@ -234,9 +233,7 @@ const AccountDialog = ({
                       </div>
                     </div>
                     <div className={classes.tokenAmount}>
-                      {token?.symbol === CORGIB
-                        ? formatCurrency(fromWei(balances?.[index]))
-                        : formatCurrency(
+                      {formatCurrency(
                             fromWei(balances?.[index]),
                             false,
                             1,

@@ -7,7 +7,6 @@ import {
   tokenLogo,
   tokenName,
   supportedStaking,
-  CORGIB,
   tokenAddresses,
 } from "../constants";
 import useActiveWeb3React from "../hooks/useActiveWeb3React";
@@ -106,9 +105,9 @@ function BalanceCard() {
                 </div>
               </div>
               <div className={classes.tokenAmount}>
-                {token?.symbol === CORGIB
-                  ? formatCurrency(fromWei(balances?.[index]))
-                  : formatCurrency(fromWei(balances?.[index]), false, 1, true)}
+                {
+                  formatCurrency(fromWei(balances?.[index]), false, 1, true)
+                }
               </div>
             </div>
           );

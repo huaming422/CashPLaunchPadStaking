@@ -2,7 +2,6 @@ import Web3 from "web3";
 import CashPrinter from "../abi/CashPrinter.json";
 import CashPrinterStaking from "../abi/Staking.json";
 import PolkaBridgeStakingMatic from "../abi/CashPrinterStakingMatic.json";
-import CorgibStaking from "../abi/CorgibStaking.json";
 import { ankrRpc, STAKE_ADDRESSES } from "../../constants";
 import { isMetaMaskInstalled } from "../../utils/helper";
 import config from "../../utils/config";
@@ -14,24 +13,18 @@ export const erc20TokenContract = (chainId, tokenAddress, library) => {
 };
 
 export const stakeContract = (chainId) => {
-  if (chainId?.toString() === "56") {
-    const address = STAKE_ADDRESSES?.[chainId];
-
-    const abi = CorgibStaking;
-    const connection = getCurrentConnection(chainId, abi, address);
-    return connection;
-  } else if (chainId?.toString() === "137") {
+ if (chainId?.toString() === config.plsChainMainnet?.toString()) {
     const address = STAKE_ADDRESSES?.[chainId];
     const abi = PolkaBridgeStakingMatic;
     const connection = getCurrentConnection(chainId, abi, address);
     return connection;
-  } else if (chainId?.toString() === config.hmyChainMainnet?.toString()) {
+  } else if (chainId?.toString() === config.plsChainTestnet?.toString()) {
     const address = STAKE_ADDRESSES?.[chainId];
 
     const abi = CashPrinterStaking;
     const connection = getCurrentConnection(chainId, abi, address);
     return connection;
-  } else if (chainId?.toString() === "1") {
+  } else if (chainId?.toString() === config.rinkeby?.toString()) {
     const address = STAKE_ADDRESSES?.[chainId];
     const abi = CashPrinterStaking;
     const connection = getCurrentConnection(chainId, abi, address);
@@ -45,19 +38,6 @@ export const stakeContract = (chainId) => {
 };
 
 const getCurrentConnection = (chainId, abi, contractAddress) => {
-  // console.log('initializing   matic instance', blockChainNetwork)
-  // const infura =
-  //   currentConnection === "testnet"
-  //     ? `https://kovan.infura.io/v3/${process.env.REACT_APP_INFURA_KEY.split(
-  //         ""
-  //       )
-  //         .reverse()
-  //         .join("")}`
-  //     : `https://mainnet.infura.io/v3/${process.env.REACT_APP_INFURA_KEY.split(
-  //         ""
-  //       )
-  //         .reverse()
-  //         .join("")}`;
   const _ankrRpc = ankrRpc?.[chainId];
 
   const web3 = isMetaMaskInstalled()

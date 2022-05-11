@@ -26,8 +26,6 @@ import {
   tokenInfo,
   tokenLogo,
   tokenName,
-  LABS,
-  CORGIB,
   tokenAddresses,
   STAKE_ADDRESSES,
 } from "../constants";
@@ -303,9 +301,7 @@ const Staking = ({
 
   const handleApprove = useCallback(() => {
     const tokenWeiAmountToApprove =
-      tokenType === CORGIB
-        ? "999999999999999999999999999999999999"
-        : toWei("999999999");
+     toWei("999999999");
     confirmAllowance(
       tokenWeiAmountToApprove,
       tokenType,
@@ -402,17 +398,6 @@ const Staking = ({
             <div className={classes.earn}>Earn {tokenName[tokenType]}</div>
           </div>
           <div className="d-flex justify-content-center  pt-3">
-            {tokenType === LABS && (
-              // eslint-disable-next-line react/jsx-no-target-blank
-              <a href="https://forms.gle/jqadUuQmKhzSrf678" target="_blank">
-                <Button
-                  variant="contained"
-                  className={classes.borderButtonRegister}
-                >
-                  IDO Register
-                </Button>
-              </a>
-            )}
             <a href={tokenInfo?.[tokenType]?.[chainId]?.buy} target="_blank">
               <Button variant="contained" className={classes.borderButton}>
                 Buy
