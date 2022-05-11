@@ -22,10 +22,10 @@ export const stakeContractAdrresses = {
 
 export const tokenAddresses = {
   CashP: {
-    1: "0x298d492e8c1d909D3F63Bc4A36C66c64ACB3d695", // mainnet
-    4: "0x0D6ae2a429df13e44A07Cd2969E085e4833f64A0", // rinkeby
-    9411: "0x0D6ae2a429df13e44A07Cd2969E085e4833f64A0", //  pulse mainnet
-    941: "0x6024ca0b7c12846a396a5d860ff885233ef16dd0", // pulse testnet
+    1: "0xc4c0489414bF88551CEc74c9ad9104357f7692B1", // mainnet
+    4: "0xc4c0489414bF88551CEc74c9ad9104357f7692B1", // rinkeby
+    9411: "0xc4c0489414bF88551CEc74c9ad9104357f7692B1", //  pulse mainnet
+    941: "0xc4c0489414bF88551CEc74c9ad9104357f7692B1", // pulse testnet
   }
 };
 
@@ -36,11 +36,11 @@ export const tokenContarctAddresses = {
         ? "0x298d492e8c1d909D3F63Bc4A36C66c64ACB3d695"
         : "0x0D6ae2a429df13e44A07Cd2969E085e4833f64A0",
   },
-  pulse: {
+  pulseChain: {
     CashP:
       currentConnection === "mainnet"
-        ? "0xfc649ce83d2b25086bf645ca88a9621b5e8a36fa"
-        : "0xfc649ce83d2b25086bf645ca88a9621b5e8a36fa",
+        ? "0xc4c0489414bF88551CEc74c9ad9104357f7692B1"
+        : "0xc4c0489414bF88551CEc74c9ad9104357f7692B1",
   }
 };
 

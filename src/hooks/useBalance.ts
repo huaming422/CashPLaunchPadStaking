@@ -127,7 +127,6 @@ export function useCurrencyBalances(
     () => currencies?.filter((currency): currency is Token => true) ?? [],
     [currencies]
   );
-
   const tokenBalances = useTokenBalances(account, tokens);
 
   const containsETH: boolean = useMemo(
