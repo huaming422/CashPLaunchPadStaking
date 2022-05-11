@@ -1,9 +1,5 @@
 # CashPrinter Stake And Earn
 
-CashPrinter is a complete decentralised Defi application platform including features like stake, farm,lending, borrowing and Dex. [Check Our Landing Page](https://polkabridge.org).
-
-![Stake Page Screenshot](stake.png?raw=true "Stake Page Screenshot")
-
 ## Available Scripts
 
 In the project directory, you can run:
