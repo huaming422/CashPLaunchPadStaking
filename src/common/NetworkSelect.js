@@ -4,6 +4,14 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import etherIcon from "../assets/symbol.png";
 import { connect } from "react-redux";
+import { formatCurrency, fromWei } from "../utils/helper";
+import { useMemo } from "react";
+import {
+  supportedStaking,
+  tokenAddresses,
+} from "../constants";
+import useActiveWeb3React from "../hooks/useActiveWeb3React";
+import { useCurrencyBalances } from "../hooks/useBalance";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,11 +48,29 @@ const useStyles = makeStyles((theme) => ({
 
 const NetworkSelect = ({ account: { currentChain } }) => {
   const classes = useStyles();
+  const { chainId, account } = useActiveWeb3React();
+
+  const tokens = useMemo(() => {
+    return supportedStaking?.[chainId]?.map((_symbol) => {
+      return { symbol: _symbol, address: tokenAddresses?.[_symbol]?.[chainId] };
+    });
+  }, [chainId]);
+  const balances = useCurrencyBalances(account, tokens);
   return (
     <div
       className={classes.main}
     >
-      <span className={classes.networkName}>10000.678</span>
+      <span className={classes.networkName}>
+        {tokens?.map(function (token, index) {
+          return (
+            <>
+              {
+                formatCurrency(fromWei(balances?.[index]), false, 1, true)
+              }
+            </>
+          );
+        })}
+      </span>
       <img className={classes.imgIcon} src={etherIcon} />
     </div>
   );
