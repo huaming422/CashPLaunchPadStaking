@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 10,
   },
   navbarButton: {
-    background: "linear-gradient(to right, #c1c6ff,purple)",
+    background: "linear-gradient(to right, #424aab,#071aa3)",
     color: "white",
     padding: 8,
     paddingLeft: 15,
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     filter: "drop-shadow(0 0 0.5rem #414141)",
     "&:hover": {
-      background: "#c1c6ff",
+      background: "linear-gradient(to right, #6a71c9,#6170df)",
     },
     [theme.breakpoints.down("sm")]: {
       marginRight: 0,

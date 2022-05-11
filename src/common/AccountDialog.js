@@ -277,7 +277,7 @@ const AccountDialog = ({
                       <div className={classes.logoWrapper}>
                         <img
                           src={
-                            "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/MetaMask_Fox.svg/1200px-MetaMask_Fox.svg.png"
+                            "img/metamask.png"
                           }
                           className={classes.logo}
                         />

@@ -372,7 +372,7 @@ const Navbar = ({ chainId }) => {
           />
           <div className="d-flex justify-content-end">
             <div>
-              <a href="/" className={classes.navbarItemsDesktopActive}>
+              <a href="/" className={classes.navbarItemsDesktopActive} style={{ fontSize: '30px' }}>
                 Cash&nbsp;Printer
               </a>
             </div>

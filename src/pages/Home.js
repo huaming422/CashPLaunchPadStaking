@@ -5,10 +5,9 @@ import Navbar from "../common/Navbar";
 import Footer from "../common/Footer";
 import Wallet from "../common/Wallet";
 import { connect } from "react-redux";
-import { supportedStaking, unsupportedStaking } from "../constants";
+import { supportedStaking } from "../constants";
 import { CHANGE_NETWORK, CONNECT_WALLET } from "../actions/types";
 import store from "../store";
-import BalanceCard from "../common/BalanceCard";
 import PbrStatistics from "../common/PbrStatistics";
 import { getCurrentNetworkName } from "../utils/helper";
 import useActiveWeb3React from "../hooks/useActiveWeb3React";
@@ -222,15 +221,6 @@ const Home = ({ account: { error, currentChain } }) => {
         : [],
     [currentChain]
   );
-  const unSupportedStakingPools = useMemo(
-    () =>
-      Object.keys(unsupportedStaking).includes(currentChain?.toString())
-        ? unsupportedStaking?.[currentChain]
-        : !currentChain
-        ? unsupportedStaking[1]
-        : [],
-    [currentChain]
-  );
 
   return (
     <div>
@@ -239,17 +229,17 @@ const Home = ({ account: { error, currentChain } }) => {
       </section>
       <div className="container">
         <div className={classes.background}>
-          <h1 className={classes.title}>Stake Pools</h1>
-          <div className={classes.divider} />
-          <div className="row mt-5">
+          {/* <h1 className={classes.title}>Stake Pools</h1> */}
+          {/* <div className={classes.divider} /> */}
+          <div className="row mt-5 justify-content-center">
             <div className="col-md-8 mb-3">
               <PbrStatistics />
             </div>
-            <div className="col-md-4">
+            {/* <div className="col-md-4">
               <div>
                 <BalanceCard tokens={supportedStaking[chainId]} />
               </div>
-            </div>
+            </div> */}
           </div>
 
           {!active && (
@@ -271,7 +261,7 @@ const Home = ({ account: { error, currentChain } }) => {
               {supportedStakingPools.length > 0 && (
                 <div className="row">
                   <div>
-                    <h1 className={classes.title}>Active Pools</h1>
+                    <h1 className={classes.title}>Stake Pools</h1>
                     <div className={classes.dividerPool} />
                   </div>
                   {supportedStakingPools.map((token, index) => (
@@ -291,7 +281,7 @@ const Home = ({ account: { error, currentChain } }) => {
                 <div style={{ textAlign: "center", color: "white" }}></div>
               )}
 
-              {unSupportedStakingPools.length > 0 && (
+              {/* {unSupportedStakingPools.length > 0 && (
                 <div className="row mt-5">
                   <div>
                     <h1 className={classes.title}>Ended Pool</h1>
@@ -305,7 +295,7 @@ const Home = ({ account: { error, currentChain } }) => {
                     </div>
                   ))}
                 </div>
-              )}
+              )} */}
             </div>
           }
         </div>

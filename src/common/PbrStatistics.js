@@ -157,9 +157,10 @@ const PbrStatistics = ({
                 src="https://assets.coingecko.com/coins/images/4324/small/U85xTl2.png?1608111978"
                 className={classes.icon}
               />
-              RPC powered by ANKR protocol
+              Buy CashP tokens to start staking
             </div>
           </div>
+          
           <div className="text-center mt-4">
             <a
               target="_blank"

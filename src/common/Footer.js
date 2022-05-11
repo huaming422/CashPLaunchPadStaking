@@ -22,43 +22,33 @@ const Footer = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <a className={classes.item} href="#">
-        Contract
-      </a>
       <a
         className={classes.item}
-        href="https://github.com/cyclese96"
+        href="https://github.com/"
         target="_blank"
       >
         Github
       </a>
       <a
         className={classes.item}
-        href="https://twitter.com/realpolkabridge"
+        href="https://twitter.com/"
         target="_blank"
       >
         Twitter
       </a>
       <a
         className={classes.item}
-        href="https://t.me/polkabridgegroup"
+        href="https://t.me/"
         target="_blank"
       >
         Telegram
       </a>
       <a
         className={classes.item}
-        href="https://discord.gg/tzemFksyZB"
+        href="https://discord.gg/"
         target="_blank"
       >
         Discord
-      </a>
-      <a
-        className={classes.item}
-        href="https://polkabridge.org"
-        target="_blank"
-      >
-        Landing Page
       </a>
     </div>
   );
