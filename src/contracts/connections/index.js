@@ -1,7 +1,7 @@
 import Web3 from "web3";
 import CashPrinter from "../abi/CashPrinter.json";
 import CashPrinterStaking from "../abi/Staking.json";
-import PolkaBridgeStakingMatic from "../abi/CashPrinterStakingMatic.json";
+import CashPStakingPulseChain from "../abi/CashPrinterStakingPulseChain.json";
 import { ankrRpc, STAKE_ADDRESSES } from "../../constants";
 import { isMetaMaskInstalled } from "../../utils/helper";
 import config from "../../utils/config";
@@ -15,7 +15,7 @@ export const erc20TokenContract = (chainId, tokenAddress, library) => {
 export const stakeContract = (chainId) => {
  if (chainId?.toString() === config.plsChainMainnet?.toString()) {
     const address = STAKE_ADDRESSES?.[chainId];
-    const abi = PolkaBridgeStakingMatic;
+    const abi = CashPStakingPulseChain;
     const connection = getCurrentConnection(chainId, abi, address);
     return connection;
   } else if (chainId?.toString() === config.plsChainTestnet?.toString()) {
