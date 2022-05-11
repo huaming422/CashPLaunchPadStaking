@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
     paddingLeft: 10,
     fontSize: 18,
-    color: "#C80C81",
+    color: "#c1c6ff",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -102,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   buyNow: {
-    background: `linear-gradient(to bottom,#D9047C, #BF1088)`,
+    background: `linear-gradient(to bottom,#3e76d5, #0c3aa1)`,
     color: "white",
     width: "fit-content",
     height: 40,
@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 15,
     borderRadius: 40,
     "&:hover": {
-      background: "rgba(224, 7, 125, 0.7)",
+      background: "rgb(105 130 254 / 70%)",
     },
     [theme.breakpoints.down("sm")]: {
       width: 120,
@@ -143,7 +143,7 @@ const PbrStatistics = ({
             <div className="d-flex justify-content-center align-items-center">
               <div
                 style={{
-                  backgroundColor: "#C80C81",
+                  backgroundColor: "#c1c6ff",
                   borderRadius: "50%",
                   height: "5px",
                   width: "5px",

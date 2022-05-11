@@ -149,8 +149,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 14,
     fontWeight: 600,
     color: "#e5e5e5",
-    // backgroundColor: "#C80C81",
-    border: "1px solid rgba(224, 7, 125, 0.6)",
+    // backgroundColor: "#c1c6ff",
+    border: "1px solid rgb(164 164 255 / 60%)",
 
     borderRadius: 14,
   },
@@ -166,7 +166,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
     paddingLeft: 10,
     fontSize: 18,
-    color: "#C80C81",
+    color: "#c1c6ff",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -216,10 +216,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 15,
     marginRight: 5,
     marginLeft: 5,
-    border: "1px solid rgba(224, 7, 125, 0.3)",
+    border: "1px solid rgb(139 181 255 / 30%)",
     padding: "5px 20px 5px 20px",
     "&:hover": {
-      background: "rgba(224, 7, 125, 0.7)",
+      background: "rgb(105 130 254 / 70%)",
     },
     [theme.breakpoints.down("sm")]: {
       width: "fit-content",
@@ -227,7 +227,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   borderButtonRegister: {
-    background: "rgba(224, 7, 125, 0.7)",
+    background: "rgb(105 130 254 / 70%)",
     color: "white",
     width: "fit-content",
     height: 32,
@@ -236,10 +236,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 15,
     marginRight: 5,
     marginLeft: 5,
-    border: "1px solid rgba(224, 7, 125, 0.3)",
+    border: "1px solid rgb(139 181 255 / 30%)",
     padding: "5px 20px 5px 20px",
     "&:hover": {
-      background: "rgba(224, 7, 125, 0.7)",
+      background: "rgb(105 130 254 / 70%)",
     },
     [theme.breakpoints.down("sm")]: {
       width: "fit-content",
@@ -392,7 +392,7 @@ const Staking = ({
           <div className="d-flex justify-content-center align-items-center ">
             <div
               style={{
-                backgroundColor: "#C80C81",
+                backgroundColor: "#c1c6ff",
                 borderRadius: "50%",
                 height: "5px",
                 width: "5px",

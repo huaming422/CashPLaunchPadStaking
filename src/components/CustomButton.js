@@ -2,7 +2,7 @@ import { Button, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   stakeButton: {
-    background: `linear-gradient(to bottom,#D9047C, #BF1088)`,
+    background: `linear-gradient(to bottom,#3e76d5, #0c3aa1)`,
     color: "white",
     width: "fit-content",
     height: 36,
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 5,
     padding: "5px 20px 5px 20px",
     "&:hover": {
-      background: "rgba(224, 7, 125, 0.7)",
+      background: "rgb(105 130 254 / 70%)",
     },
     [theme.breakpoints.down("sm")]: {
       width: "fit-content",

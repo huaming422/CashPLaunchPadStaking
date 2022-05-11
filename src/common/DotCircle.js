@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   circle: {
-    color: "#C80C81",
+    color: "#c1c6ff",
     fontSize: 20,
   },
 }));

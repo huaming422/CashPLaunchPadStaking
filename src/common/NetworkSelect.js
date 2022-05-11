@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   main: {
     color: "white",
     backgroundColor: "#100525",
-    border: "1px solid rgba(224, 7, 125, 0.7)",
+    border: "1px solid rgb(105 130 254 / 70%)",
     borderRadius: 60,
     paddingLeft: 15,
     height: 40,

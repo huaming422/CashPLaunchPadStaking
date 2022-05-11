@@ -19,7 +19,6 @@ import TouchAppOutlined from "@material-ui/icons/TouchAppOutlined";
 import { EqualizerOutlined } from "@material-ui/icons";
 import Wallet from "./Wallet";
 import AccountDialog from "./AccountDialog";
-import DotCircle from "./DotCircle";
 import NetworkSelect from "./NetworkSelect";
 import connectors from "../connection/connectors";
 import { WalletConnectConnector } from "web3-react-walletconnect-connector";
@@ -135,9 +134,25 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     paddingBottom: 7,
   },
+  navbarItemsMobileActive: {
+    paddingRight: 10,
+    fontWeight: 500,
+    lineHeight: "45px",
+    verticalAlign: "baseline",
+    letterSpacing: "-1px",
+    margin: 0,
+    padding: "9px 0px 0px",
+    cursor: "pointer",
+    fontSize: "6.2vw",
+    color: "#55ff71",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingBottom: 7,
+  },
   navbarButton: {
     backgroundColor: "#f9f9f9",
-    color: "#C80C81",
+    color: "#c1c6ff",
     borderRadius: 10,
     height: 35,
     marginRight: 40,
@@ -156,7 +171,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mobileButton: {
     borderRadius: "50px",
-    background: `linear-gradient(to bottom,#D9047C, #BF1088)`,
+    background: `linear-gradient(to bottom,#3e76d5, #0c3aa1)`,
     lineHeight: "24px",
     verticalAlign: "baseline",
     letterSpacing: "-0.8px",
@@ -298,7 +313,7 @@ const Navbar = ({ chainId }) => {
         {[
           {
             name: "Stake",
-            link: "https://stake.polkabridge.org/",
+            link: "https://localhost: 3000/",
             id: "staking",
             icon: <EqualizerOutlined />,
           },
@@ -316,7 +331,7 @@ const Navbar = ({ chainId }) => {
           },
           {},
         ].map((tab, index) => (
-          <ListItem button  key={index} onClick={toggleDrawer(anchor, false)}>
+          <ListItem button key={index} onClick={toggleDrawer(anchor, false)}>
             <a href={tab.link}>
               <ListItemText
                 primary={tab.name}
@@ -358,7 +373,7 @@ const Navbar = ({ chainId }) => {
           <div className="d-flex justify-content-end">
             <div>
               <a href="/" className={classes.navbarItemsDesktopActive}>
-                Cash Printer
+                Cash&nbsp;Printer
               </a>
             </div>
           </div>
@@ -368,7 +383,7 @@ const Navbar = ({ chainId }) => {
           <div className="d-flex justify-content-end">
             <div>
               <a href="/" className={classes.navbarItemsDesktopActive}>
-                Stake <DotCircle active={true} />
+                Stake 
               </a>
             </div>
           </div>
@@ -380,7 +395,7 @@ const Navbar = ({ chainId }) => {
               className={classes.navbarItemsDesktop}
             >
               Farm
-              <DotCircle />
+              
             </a>
           </div>
           <div>
@@ -389,7 +404,7 @@ const Navbar = ({ chainId }) => {
               target="_blank"
               className={classes.navbarItemsDesktop}
             >
-              Launchpad <DotCircle />
+              Launchpad 
             </a>
           </div>
           <div className={classes.grow} />
@@ -402,8 +417,15 @@ const Navbar = ({ chainId }) => {
             <Avatar
               variant="square"
               src="img/logo-white.png"
-              style={{ height: 38, width: 150 }}
+              style={{ height: 38, width: 38 }}
             />
+          </div>
+          <div className="d-flex justify-content-end">
+            <div>
+              <a href="/" className={classes.navbarItemsMobileActive}>
+              Cash&nbsp;Printer
+              </a>
+            </div>
           </div>
           <div style={{ marginTop: 10 }}>
             <Wallet onWalletClick={handleWalletClick} />

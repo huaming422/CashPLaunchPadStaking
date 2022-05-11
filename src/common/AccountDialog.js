@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 20,
     color: "#f9f9f9",
     "&:hover": {
-      background: "rgba(224, 7, 125, 0.7)",
+      background: "rgb(105 130 254 / 70%)",
     },
   },
   buttons: {},

@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     background: "transparent",
 
     color: "white",
-    border: "1px solid rgba(224, 7, 125, 0.7)",
+    border: "1px solid rgb(105 130 254 / 70%)",
 
     padding: 7,
     paddingLeft: 10,
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 10,
   },
   navbarButton: {
-    background: "linear-gradient(to right, #C80C81,purple)",
+    background: "linear-gradient(to right, #c1c6ff,purple)",
     color: "white",
     padding: 8,
     paddingLeft: 15,
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     filter: "drop-shadow(0 0 0.5rem #414141)",
     "&:hover": {
-      background: "#C80C81",
+      background: "#c1c6ff",
     },
     [theme.breakpoints.down("sm")]: {
       marginRight: 0,

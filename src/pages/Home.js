@@ -120,12 +120,12 @@ const useStyles = makeStyles((theme) => ({
   divider: {
     width: 90,
     height: 3,
-    background: "linear-gradient(to right, #e0077d, rgba(0, 0, 0, 0.4))",
+    background: "linear-gradient(to right, #666dff, rgb(46 253 224 / 73%))",
   },
   dividerPool: {
     width: 90,
     height: 3,
-    background: "linear-gradient(to right, #e0077d, rgba(0, 0, 0, 0.4))",
+    background: "linear-gradient(to right, #666dff, rgb(46 253 224 / 73%))",
     marginLeft: 5,
   },
 }));
