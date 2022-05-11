@@ -1,14 +1,14 @@
 import Web3 from "web3";
-import PolkaBridge from "../abi/PolkaBridge.json";
-import PolkaBridgeStaking from "../abi/PolkaBridgeStaking.json";
-import PolkaBridgeStakingMatic from "../abi/polkabridgeStakingMatic.json";
+import CashPrinter from "../abi/CashPrinter.json";
+import CashPrinterStaking from "../abi/Staking.json";
+import PolkaBridgeStakingMatic from "../abi/CashPrinterStakingMatic.json";
 import CorgibStaking from "../abi/CorgibStaking.json";
 import { ankrRpc, STAKE_ADDRESSES } from "../../constants";
 import { isMetaMaskInstalled } from "../../utils/helper";
 import config from "../../utils/config";
 
 export const erc20TokenContract = (chainId, tokenAddress, library) => {
-  const abi = PolkaBridge;
+  const abi = CashPrinter;
   const connection = getCurrentConnection(chainId, abi, tokenAddress);
   return connection;
 };
@@ -28,17 +28,17 @@ export const stakeContract = (chainId) => {
   } else if (chainId?.toString() === config.hmyChainMainnet?.toString()) {
     const address = STAKE_ADDRESSES?.[chainId];
 
-    const abi = PolkaBridgeStaking;
+    const abi = CashPrinterStaking;
     const connection = getCurrentConnection(chainId, abi, address);
     return connection;
   } else if (chainId?.toString() === "1") {
     const address = STAKE_ADDRESSES?.[chainId];
-    const abi = PolkaBridgeStaking;
+    const abi = CashPrinterStaking;
     const connection = getCurrentConnection(chainId, abi, address);
     return connection;
   } else {
     const address = STAKE_ADDRESSES?.[1];
-    const abi = PolkaBridgeStaking;
+    const abi = CashPrinterStaking;
     const connection = getCurrentConnection(1, abi, address);
     return connection;
   }

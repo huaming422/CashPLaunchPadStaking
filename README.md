@@ -1,6 +1,6 @@
-# PolkaBridge Stake And Earn
+# CashPrinter Stake And Earn
 
-PolkaBridge is a complete decentralised Defi application platform including features like stake, farm,lending, borrowing and Dex. [Check Our Landing Page](https://polkabridge.org).
+CashPrinter is a complete decentralised Defi application platform including features like stake, farm,lending, borrowing and Dex. [Check Our Landing Page](https://polkabridge.org).
 
 ![Stake Page Screenshot](stake.png?raw=true "Stake Page Screenshot")
 

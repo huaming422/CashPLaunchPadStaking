@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo } from "react";
+/* eslint-disable jsx-a11y/alt-text */
+import React, { useMemo } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Card } from "@material-ui/core";
 import { formatCurrency, fromWei } from "../utils/helper";

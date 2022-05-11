@@ -1,3 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-dupe-keys */
+/* eslint-disable react/jsx-no-target-blank */
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -12,9 +15,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import clsx from "clsx";
 import MenuIcon from "@material-ui/icons/Menu";
 import PeopleAltOutlined from "@material-ui/icons/PeopleAltOutlined";
-import FlareOutlined from "@material-ui/icons/FlareOutlined";
 import TouchAppOutlined from "@material-ui/icons/TouchAppOutlined";
-import VpnLockOutlined from "@material-ui/icons/VpnLockOutlined";
 import { EqualizerOutlined } from "@material-ui/icons";
 import Wallet from "./Wallet";
 import AccountDialog from "./AccountDialog";
@@ -128,7 +129,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "9px 14px 0px",
     cursor: "pointer",
     fontSize: "1.2vw",
-    color: "#e0077d",
+    color: "#55ff71",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -200,8 +201,8 @@ const useStyles = makeStyles((theme) => ({
     height: "auto",
   },
   logo: {
-    height: 38,
-    width: 150,
+    height: 90,
+    width: 90,
     [theme.breakpoints.down("sm")]: {
       height: 30,
       width: "fit-content",
@@ -231,7 +232,7 @@ const Navbar = ({ chainId }) => {
     setState({ ...state, [anchor]: open });
   };
 
-  const { active, account, activate, deactivate } = useActiveWeb3React();
+  const { active, activate, deactivate } = useActiveWeb3React();
 
   const createConnectHandler = async (connector) => {
     try {
@@ -275,13 +276,13 @@ const Navbar = ({ chainId }) => {
 
       createConnectHandler(connector);
       setAccountDialog(false);
-    } catch (error) {}
+    } catch (error) { }
   };
 
   const handleWalletClick = () => {
     try {
       setAccountDialog(true);
-    } catch (error) {}
+    } catch (error) { }
   };
 
   const list = (anchor) => (
@@ -303,32 +304,19 @@ const Navbar = ({ chainId }) => {
           },
           {
             name: "Farm",
-            link: "https://farm.polkabridge.org/",
+            link: "https://google.com",
             id: "intro",
             icon: <TouchAppOutlined />,
           },
           {
             name: "Launchpad",
-            link: "https://launchpad.polkabridge.org/",
+            link: "https://google.com",
             id: "characters",
             icon: <PeopleAltOutlined />,
           },
-          {
-            name: "Swap",
-            link: "https://swap.polkabridge.org",
-            id: "items",
-            icon: <VpnLockOutlined />,
-          },
-          {
-            name: "Lending",
-            link: "#",
-            id: "features",
-            icon: <FlareOutlined />,
-          },
-
           {},
         ].map((tab, index) => (
-          <ListItem button key={tab.name} onClick={toggleDrawer(anchor, false)}>
+          <ListItem button  key={index} onClick={toggleDrawer(anchor, false)}>
             <a href={tab.link}>
               <ListItemText
                 primary={tab.name}
@@ -367,6 +355,13 @@ const Navbar = ({ chainId }) => {
             src="img/logo-white.png"
             className={classes.logo}
           />
+          <div className="d-flex justify-content-end">
+            <div>
+              <a href="/" className={classes.navbarItemsDesktopActive}>
+                Cash Printer
+              </a>
+            </div>
+          </div>
 
           <div className={classes.leftMargin} />
 
@@ -379,7 +374,7 @@ const Navbar = ({ chainId }) => {
           </div>
           <div>
             <a
-              href="https://farm.polkabridge.org"
+              href="https://google.com"
               target="_blank"
               rel="noreferrer"
               className={classes.navbarItemsDesktop}
@@ -390,37 +385,13 @@ const Navbar = ({ chainId }) => {
           </div>
           <div>
             <a
-              href="https://launchpad.polkabridge.org"
+              href="https://google.com"
               target="_blank"
               className={classes.navbarItemsDesktop}
             >
               Launchpad <DotCircle />
             </a>
           </div>
-          <div>
-            <a
-              href="https://ino.polkabridge.org"
-              target="_blank"
-              className={classes.navbarItemsDesktop}
-            >
-              INO <DotCircle />
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://swap.polkabridge.org"
-              className={classes.navbarItemsDesktop}
-            >
-              Swap <DotCircle />
-            </a>
-          </div>
-
-          <div>
-            <a href="#" className={classes.navbarItemsDesktop}>
-              Lending <DotCircle />
-            </a>
-          </div>
-
           <div className={classes.grow} />
           <div>{<NetworkSelect selectedNetwork={chainId} />}</div>
           <Wallet onWalletClick={handleWalletClick} />
@@ -439,8 +410,8 @@ const Navbar = ({ chainId }) => {
           </div>
 
           <div>
-            {["right"].map((anchor) => (
-              <React.Fragment key={anchor}>
+            {["right"].map((anchor, index) => (
+              <React.Fragment key={index}>
                 <IconButton
                   aria-label="Menu"
                   aria-haspopup="true"

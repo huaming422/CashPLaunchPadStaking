@@ -33,7 +33,7 @@ export const stakeContractAdrresses = {
 };
 
 export const tokenAddresses = {
-  PBR: {
+  CashP: {
     1: "0x298d492e8c1d909D3F63Bc4A36C66c64ACB3d695", // mainnet
     42: "0x0D6ae2a429df13e44A07Cd2969E085e4833f64A0", // koven
     137: "0x0D6ae2a429df13e44A07Cd2969E085e4833f64A0", //  polygon mainnet
@@ -87,7 +87,7 @@ export const tokenAddresses = {
 
 export const tokenContarctAddresses = {
   ethereum: {
-    PBR:
+    CashP:
       currentConnection === "mainnet"
         ? "0x298d492e8c1d909D3F63Bc4A36C66c64ACB3d695"
         : "0x0D6ae2a429df13e44A07Cd2969E085e4833f64A0",
@@ -113,7 +113,7 @@ export const tokenContarctAddresses = {
         : "0x0D6ae2a429df13e44A07Cd2969E085e4833f64A0",
   },
   matic: {
-    PBR:
+    CashP:
       currentConnection === "mainnet"
         ? "0x0D6ae2a429df13e44A07Cd2969E085e4833f64A0"
         : "0x6024ca0b7c12846a396a5d860ff885233ef16dd0",
@@ -123,7 +123,7 @@ export const tokenContarctAddresses = {
         : "0x6024ca0b7c12846a396a5d860ff885233ef16dd0",
   },
   harmony: {
-    PBR:
+    CashP:
       currentConnection === "mainnet"
         ? "0xfc649ce83d2b25086bf645ca88a9621b5e8a36fa"
         : "0xfc649ce83d2b25086bf645ca88a9621b5e8a36fa",
@@ -152,7 +152,7 @@ export const tokenContarctAddresses = {
   },
 };
 
-export const PBR = "PBR";
+export const CashP = "CashP";
 export const BITE = "BITE";
 export const CORGIB = "CORGIB";
 export const PWAR = "PWAR";
@@ -166,7 +166,7 @@ export const AOG = "AOG";
 export const LABS = "LABS";
 
 export const tokenLogo = {
-  PBR: "img/symbol.png",
+  CashP: "img/symbol.png",
   BITE: "img/bite.png",
   CORGIB: "img/corgi.png",
   PWAR: "img/pwar.png",
@@ -181,9 +181,9 @@ export const tokenLogo = {
 };
 
 export const tokenName = {
-  PBR: "PolkaBridge",
+  CashP: "CashPrinter",
   BITE: "DragonBite",
-  CORGIB: "Corgi Of PolkaBridge",
+  CORGIB: "Corgi Of CashPrinter",
   PWAR: "PolkaWar",
   CFL365: "CFL 365",
   PUN: "CryptoPunt",
@@ -196,7 +196,7 @@ export const tokenName = {
 };
 
 export const tokenInfo = {
-  PBR: {
+  CashP: {
     1: {
       buy: "https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x298d492e8c1d909d3f63bc4a36c66c64acb3d695",
       info: "https://www.coingecko.com/en/coins/polkabridge",
@@ -328,7 +328,7 @@ export const tokenInfo = {
 
 //given token name and network, --> poolId
 export const poolId: { [index: string]: number } = {
-  PBR: 0,
+  CashP: 0,
   BITE: 1,
   CORGIB: 0,
   PWAR: 1,
@@ -344,7 +344,7 @@ export const poolId: { [index: string]: number } = {
 
 export const apyConstants = {
   ethereum: {
-    PBR: {
+    CashP: {
       NUMBER_BLOCKS_PER_YEAR: 2400000,
       AVG_REWARD_PER_BLOCK: 1, //0.7
     },
@@ -370,7 +370,7 @@ export const apyConstants = {
     },
   },
   matic: {
-    PBR: {
+    CashP: {
       NUMBER_BLOCKS_PER_YEAR: 43200 * 365,
       AVG_REWARD_PER_BLOCK: 0.07,
     },
@@ -380,7 +380,7 @@ export const apyConstants = {
     },
   },
   harmony: {
-    PBR: {
+    CashP: {
       NUMBER_BLOCKS_PER_YEAR: 43200 * 365,
       AVG_REWARD_PER_BLOCK: 0.25,
     },
@@ -415,7 +415,7 @@ export const tokenPriceConstants = {
 };
 
 export const coingeckoTokenId = {
-  PBR: "polkabridge",
+  CashP: "polkabridge",
   BITE: "dragonbite",
   CFL365: "cfl365-finance",
   PUN: "cryptopunt",
@@ -479,12 +479,12 @@ export const claimTokens = "1";
 export const supportedNetworks = ["1", "56", "137"];
 
 export const supportedStaking = {
-  1: [PBR, LABS],
-  42: [PBR, LABS],
+  1: [CashP, LABS],
+  42: [CashP, LABS],
   56: [CORGIB, PWAR],
   97: [CORGIB, PWAR],
-  137: [PBR],
-  80001: [PBR],
+  137: [CashP],
+  80001: [CashP],
 };
 
 export const unsupportedStaking = {
@@ -501,7 +501,7 @@ export const unsupportedStaking = {
 export const minimumStakingAmount = {
   CORGIB: 100000000,
   BITE: 1,
-  PBR: 1,
+  CashP: 1,
   PWAR: 1,
   CFL365: 1,
   PUN: 1,

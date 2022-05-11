@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useMemo, useState } from "react";
 import { fetchTokenPrice } from "../utils/helper";
 import { Token } from "../utils/interface";

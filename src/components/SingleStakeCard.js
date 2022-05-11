@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-no-target-blank */
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Button, Card, Divider, makeStyles } from "@material-ui/core";
 import React, { useCallback, useEffect, useMemo } from "react";
 import { BigNumber } from "bignumber.js";
@@ -47,7 +50,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(41, 42, 66, 0.3)",
     border: "1px solid #212121",
     filter: "drop-shadow(0 0 0.5rem #212121)",
-    border: "1px solid #212121",
     [theme.breakpoints.down("sm")]: {
       paddingLeft: 0,
       paddingRight: 0,
@@ -401,6 +403,7 @@ const Staking = ({
           </div>
           <div className="d-flex justify-content-center  pt-3">
             {tokenType === LABS && (
+              // eslint-disable-next-line react/jsx-no-target-blank
               <a href="https://forms.gle/jqadUuQmKhzSrf678" target="_blank">
                 <Button
                   variant="contained"

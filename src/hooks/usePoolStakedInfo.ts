@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useMemo, useState } from "react";
 import { useSingleCallResult } from "../state/multicall/hooks";
 import { useStakeContract } from "./useContract";

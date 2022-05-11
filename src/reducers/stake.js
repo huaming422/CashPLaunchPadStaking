@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import {
   RESET_USER_STAKE,
   SHOW_POOL_LOADING,

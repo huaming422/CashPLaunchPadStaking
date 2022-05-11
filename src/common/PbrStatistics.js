@@ -1,3 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/jsx-no-target-blank */
 import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Avatar, Button, Card } from "@material-ui/core";
@@ -60,8 +63,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   logo: {
-    width: 70,
-    height: 70,
+    width: 90,
+    height: 90,
     marginTop: 5,
     marginBottom: 10,
     backgroundColor: "transparent",
@@ -134,9 +137,9 @@ const PbrStatistics = ({
           {" "}
           <div>
             <div className="d-flex justify-content-center">
-              <Avatar className={classes.logo} src="./img/symbol.png" />
+              <Avatar className={classes.logo} src="./img/logo-white.png" />
             </div>
-            <h6 className={classes.title}>PBR Statistics</h6>
+            <h6 className={classes.title}>CashP Statistics</h6>
             <div className="d-flex justify-content-center align-items-center">
               <div
                 style={{

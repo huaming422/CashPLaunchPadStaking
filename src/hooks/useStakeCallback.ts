@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { toWei } from "../utils/helper";
 import { TransactionStatus } from "../utils/interface";

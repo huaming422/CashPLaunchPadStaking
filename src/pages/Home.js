@@ -210,6 +210,7 @@ const Home = ({ account: { error, currentChain } }) => {
     } else if (JSON.stringify(error).includes("User rejected transaction")) {
       alert(`Transaction cancelled`);
     }
+    // eslint-disable-next-line
   }, [JSON.stringify(error)]);
 
   const supportedStakingPools = useMemo(
@@ -273,8 +274,8 @@ const Home = ({ account: { error, currentChain } }) => {
                     <h1 className={classes.title}>Active Pools</h1>
                     <div className={classes.dividerPool} />
                   </div>
-                  {supportedStakingPools.map((token) => (
-                    <div className="col-md-4">
+                  {supportedStakingPools.map((token, index) => (
+                    <div className="col-md-4" key={index}>
                       <div className={classes.card}>
                         <SingleStakeCard tokenType={token} />
                       </div>
@@ -296,8 +297,8 @@ const Home = ({ account: { error, currentChain } }) => {
                     <h1 className={classes.title}>Ended Pool</h1>
                     <div className={classes.dividerPool} />
                   </div>
-                  {unSupportedStakingPools.map((token) => (
-                    <div className="col-md-4 mt-3">
+                  {unSupportedStakingPools.map((token, index) => (
+                    <div className="col-md-4 mt-3" key={index}>
                       <div className={classes.card}>
                         <SingleStakeCard tokenType={token} stopped={true} />
                       </div>

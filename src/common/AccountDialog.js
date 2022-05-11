@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useMemo } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Dialog from "@material-ui/core/Dialog";
@@ -215,7 +216,7 @@ const AccountDialog = ({
             <div style={{ width: "100%", paddingLeft: 20, paddingRight: 20 }}>
               {tokens?.map(function (token, index) {
                 return (
-                  <div className="d-flex justify-content-between mt-4">
+                  <div className="d-flex justify-content-between mt-4" key={index}>
                     <div className="d-flex justify-content-start">
                       <div className={classes.logoWrapper}>
                         <img

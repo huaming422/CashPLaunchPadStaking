@@ -58,7 +58,7 @@ const CustomButton = ({
       variant="contained"
       disabled={disabled}
       className={
-        variant == "primary" ? classes.stakeButton : classes.unstakeButton
+        variant === "primary" ? classes.stakeButton : classes.unstakeButton
       }
     >
       {children}

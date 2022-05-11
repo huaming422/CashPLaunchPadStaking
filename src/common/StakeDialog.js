@@ -119,7 +119,6 @@ const useStyles = makeStyles((theme) => ({
   },
   maxBtn: {
     background: `linear-gradient(to bottom,#D9047C, #BF1088)`,
-    padding: 0,
     padding: "3px 5px 3px 5px",
     fontSize: 12,
     borderRadius: 15,

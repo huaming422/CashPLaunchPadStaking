@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import {
   CONNECT_WALLET,
   DISCONNECT_WALLET,
